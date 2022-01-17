@@ -1,2 +1,177 @@
+@use "../abstracts/abstracts" as *;
+
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 9%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+
+  .logo {
+    margin-right: auto;
+    font-size: 2.5rem;
+    color: $negro;
+    font-weight: bolder;
+    i {
+      color: $verde;
+    }
+  }
+
+  .navegacion {
+    a {
+      margin-left: 2rem;
+      font-size: 1.7rem;
+      color: $negro;
+
+      &:hover {
+        color: $verde;
+      }
+    }
+
+    #cerrar-nav {
+      font-size: 5rem;
+      cursor: pointer;
+      color: $negro;
+      display: none;
+    }
+  }
+
+  .iconos a,
+  .iconos div {
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    color: $negro;
+    &:hover {
+      color: $verde;
+    }
+  }
+  .iconos.oculto {
+    pointer-events: none;
+  }
+
+  #btn-menu {
+    display: none;
+  }
+}
+
+.buscador {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transform: translateY(-110%);
+
+  &.activo {
+    transform: translateY(0);
+  }
+
+  #cerrar-buscador {
+    position: absolute;
+    top: 2rem;
+    right: 2.5rem;
+    cursor: pointer;
+    color: $blanco;
+    font-size: 6rem;
+
+    &:hover {
+      color: $verde;
+    }
+  }
+
+  form {
+    width: 70rem;
+    margin: 0 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 0.2rem solid $blanco;
+    display: flex;
+    align-items: center;
+
+    input {
+      width: 100%;
+      font-size: 2rem;
+      color: $blanco;
+      text-transform: none;
+      background: none;
+      padding-right: 2rem;
+
+      &::placeholder {
+        color: #aaa;
+      }
+    }
+
+    label {
+      font-size: 3rem;
+      cursor: pointer;
+      color: $blanco;
+      &:hover {
+        color: $verde;
+      }
+    }
+  }
+}
+
+// Media Queries
+@media (max-width: 1200px) {
+  .header {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    #btn-menu {
+      display: inline-block;
+    }
+    .navegacion {
+      position: fixed;
+      top: 0;
+      left: -110%;
+      background: $blanco;
+      z-index: 1000;
+      width: 35rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &.activo {
+        left: 0;
+        box-shadow: 0 0 0 100vw rgb(0, 0, 0, 0.8);
+      }
+      a {
+        margin: 1rem 0;
+        font-size: 3rem;
+      }
+
+      #cerrar-nav {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
 }
