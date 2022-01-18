@@ -26,3 +26,12 @@ document.querySelector("#cerrar-buscador").onclick = () => {
 window.onscroll = () => {
   navbar.classList.remove("activo");
 };
+
+var swiper = new Swiper(".slider-inicio", {
+  loop: true,
+  grabCursor: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});

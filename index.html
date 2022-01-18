@@ -10,6 +10,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
     <!-- Link CSS -->
     <link rel="stylesheet" href="css/main.css" />
   </head>
@@ -52,9 +57,9 @@
 
     <!-- Inicio Inicio -->
     <section class="inicio" id="inicio">
-      <div class="slider-inicio">
-        <div class="contenedor">
-          <div class="slide">
+      <div class="swiper slider-inicio">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
             <div
               class="caja"
               style="background: url(img/home-bg-1.jpg) no-repeat"
@@ -62,19 +67,19 @@
               <div class="contenido">
                 <span>nunca pares de</span>
                 <h3>explorar</h3>
-                <span
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Libero deleniti maiores soluta nisi? Excepturi odit
                   perferendis qui eos laboriosam doloremque ad similique, nobis
                   tenetur iure laborum eveniet. Perspiciatis, recusandae!
-                  Voluptates.</span
-                >
+                  Voluptates.
+                </p>
                 <a href="#" class="btn">empezar ahora.</a>
               </div>
             </div>
           </div>
 
-          <div class="slide">
+          <div class="swiper-slide">
             <div
               class="caja segunda"
               style="background: url(img/home-bg-2.jpg) no-repeat"
@@ -82,19 +87,19 @@
               <div class="contenido">
                 <span>una experiencia</span>
                 <h3>unica</h3>
-                <span
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Libero deleniti maiores soluta nisi? Excepturi odit
                   perferendis qui eos laboriosam doloremque ad similique, nobis
                   tenetur iure laborum eveniet. Perspiciatis, recusandae!
-                  Voluptates.</span
-                >
+                  Voluptates.
+                </p>
                 <a href="#" class="btn">empezar ahora.</a>
               </div>
             </div>
           </div>
 
-          <div class="slide">
+          <div class="swiper-slide">
             <div
               class="caja tercera"
               style="background: url(img/home-bg-3.jpg) no-repeat"
@@ -102,22 +107,25 @@
               <div class="contenido">
                 <span>explora el</span>
                 <h3>nuevo mundo</h3>
-                <span
-                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Libero deleniti maiores soluta nisi? Excepturi odit
                   perferendis qui eos laboriosam doloremque ad similique, nobis
                   tenetur iure laborum eveniet. Perspiciatis, recusandae!
-                  Voluptates.</span
-                >
-                <a href="#" class="btn">empezar ahora.</a>
+                  Voluptates.
+                </p>
+                <a href="#" class="btn">explorar ahora.</a>
               </div>
             </div>
           </div>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
     </section>
     <!-- Fin Inicio -->
 
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <!-- link JS -->
     <script src="script/script.js"></script>
   </body>

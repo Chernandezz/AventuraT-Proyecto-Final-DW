@@ -1,7 +1,8 @@
 @use "base/base";
-@use "abstracts/abstracts";
+@use "abstracts/abstracts" as a;
 @use "pages/pages";
 @use "layout/layout";
+@use "base/mediaqueries";
 
 * {
   font-family: "Poppins", sans-serif;
@@ -26,10 +27,30 @@ html {
   }
 
   &::-webkit-scrollbar-track {
-    background: abstracts.$blanco;
+    background: a.$blanco;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: abstracts.$negro;
+    background: a.$negro;
+  }
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  border: a.$borde;
+  color: a.$negro;
+  cursor: pointer;
+  background: none;
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+
+  &:hover {
+    background: a.$negro;
+    color: a.$blanco;
   }
 }
