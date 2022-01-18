@@ -45,3 +45,32 @@
   font-size: 3rem;
   color: $negro;
 }
+
+.categorias {
+  .contenedor-caja {
+    @include grid(29rem);
+  }
+  .caja {
+    text-align: center;
+    padding: 1rem;
+
+    img {
+      height: 20rem;
+      widows: 20rem;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+      color: $verde;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: $negro;
+      padding: 1rem 0;
+      line-height: 2;
+    }
+  }
+}

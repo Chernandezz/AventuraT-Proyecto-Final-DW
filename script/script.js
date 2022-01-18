@@ -25,6 +25,20 @@ document.querySelector("#cerrar-buscador").onclick = () => {
 
 window.onscroll = () => {
   navbar.classList.remove("activo");
+
+  if (window.scrollY > 0) {
+    document.querySelector(".header").classList.add("activo");
+  } else {
+    document.querySelector(".header").classList.remove("activo");
+  }
+};
+
+window.onload = () => {
+  if (window.scrollY > 0) {
+    document.querySelector(".header").classList.add("activo");
+  } else {
+    document.querySelector(".header").classList.remove("activo");
+  }
 };
 
 var swiper = new Swiper(".slider-inicio", {
