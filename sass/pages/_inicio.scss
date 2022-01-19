@@ -46,6 +46,7 @@
   color: $negro;
 }
 
+// Categorias
 .categorias {
   .contenedor-caja {
     @include grid(29rem);
@@ -71,6 +72,71 @@
       color: $negro;
       padding: 1rem 0;
       line-height: 2;
+    }
+  }
+}
+
+// Tienda
+.tienda {
+  .slide {
+    border: $borde;
+    &:hover .imagen .iconos {
+      transform: translateY(0);
+    }
+
+    .imagen {
+      position: relative;
+      overflow: hidden;
+      height: 30rem;
+      width: 100%;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .iconos {
+        width: 100%;
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        text-align: center;
+        z-index: 10;
+        transform: translateY(7rem);
+        a {
+          height: 4.5rem;
+          width: 4.5rem;
+          line-height: 4.5rem;
+          font-size: 1.7rem;
+          background: $negro;
+          color: $blanco;
+          margin: 0 0.2rem;
+
+          &:hover {
+            background: $verde;
+          }
+        }
+      }
+    }
+
+    .contenido {
+      padding: 1rem 0;
+      text-align: center;
+      h3 {
+        font-size: 2rem;
+        color: $negro;
+      }
+      .precio {
+        padding: 1rem 0;
+        padding-top: 0.5rem;
+        font-size: 2rem;
+        color: $verde;
+      }
+      .estrellas i {
+        font-size: 1.7rem;
+        color: $negro;
+      }
     }
   }
 }
