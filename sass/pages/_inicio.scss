@@ -48,7 +48,7 @@
 
 // Categorias
 .categorias {
-  .contenedor-caja {
+  .contenedor {
     @include grid(29rem);
   }
   .caja {
@@ -64,6 +64,42 @@
 
     h3 {
       font-size: 2rem;
+      color: $verde;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: $negro;
+      padding: 1rem 0;
+      line-height: 2;
+    }
+  }
+}
+
+// Nosotros
+.nosotros {
+  background-color: $fondo-claro;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  .imagen {
+    flex: 1 1 42rem;
+    padding-right: 5rem;
+    padding-bottom: 5rem;
+
+    img {
+      width: 100%;
+      box-shadow: 4rem 4rem 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .contenido {
+    flex: 1 1 42rem;
+
+    h3 {
+      font-size: 3rem;
       color: $verde;
     }
 
@@ -136,6 +172,221 @@
       .estrellas i {
         font-size: 1.7rem;
         color: $negro;
+      }
+    }
+  }
+}
+
+// Paquetes
+.paquetes {
+  background: $fondo-claro;
+
+  .contenedor {
+    @include grid(32rem);
+    .caja {
+      text-align: center;
+      background: $blanco;
+      border: $borde;
+      box-shadow: $fondo-caja;
+      border-radius: 0.5rem;
+
+      &:hover {
+        background: $negro;
+
+        .contenido > * {
+          color: $blanco;
+        }
+
+        .btn {
+          border-color: $blanco;
+
+          &:hover {
+            color: $negro;
+            background: $blanco;
+          }
+        }
+      }
+
+      .imagen {
+        height: 25rem;
+        overflow: hidden;
+        padding: 2rem;
+        padding-bottom: 0;
+        border-radius: 0.5rem;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 0.5rem;
+        }
+      }
+      .contenido {
+        padding: 2rem;
+
+        h3 {
+          font-size: 2rem;
+          color: $negro;
+        }
+        p {
+          font-size: 1.5rem;
+          color: $negro;
+          padding: 1rem 0;
+          line-height: 2;
+        }
+        .precio {
+          font-size: 2rem;
+          color: $verde;
+        }
+      }
+    }
+  }
+}
+
+// Experiencias
+.experiencias {
+  .slide {
+    .texto {
+      padding: 2rem;
+      font-size: 1.5rem;
+      font-style: italic;
+      background-color: $fondo-claro;
+      border-radius: 0.5rem;
+      color: $negro;
+      line-height: 2;
+      position: relative;
+      z-index: 0;
+      margin-bottom: 3rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -1.5rem;
+        left: 0.7rem;
+        height: 3rem;
+        width: 3rem;
+        background: $fondo-claro;
+        transform: rotate(45deg);
+      }
+    }
+
+    .usuario {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    img {
+      height: 7rem;
+      width: 7rem;
+      border-radius: 50%;
+    }
+    h3 {
+      font-size: 2rem;
+      color: $negro;
+    }
+    span {
+      color: $verde;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+// Servicios
+.servicios {
+  background: $fondo-claro;
+  .contenedor {
+    @include grid(31rem);
+
+    .caja {
+      text-align: center;
+      padding: 2rem;
+      border: $borde;
+      border-radius: 0.5rem;
+      background-color: $blanco;
+
+      &:hover {
+        background-color: $negro;
+
+        img {
+          filter: invert(1);
+        }
+
+        p {
+          color: $blanco;
+        }
+
+        .btn {
+          border-color: $blanco;
+          color: $blanco;
+
+          &:hover {
+            background-color: $blanco;
+            color: $negro;
+          }
+        }
+      }
+
+      img {
+        height: 10rem;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        font-size: 2rem;
+        color: $verde;
+      }
+
+      p {
+        font-size: 1.5rem;
+        color: $negro;
+        padding: 1rem 0;
+        line-height: 2;
+      }
+    }
+  }
+}
+
+// Suscripcion
+
+.suscripcion {
+  .contenido {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+
+    p {
+      font-size: 1.5rem;
+      line-height: 2;
+      color: $negro;
+    }
+
+    form {
+      margin-top: 2rem;
+      background-color: $blanco;
+      border-radius: 5rem;
+      border: $borde;
+      padding: 0.7rem;
+      display: flex;
+
+      .email {
+        width: 100%;
+        background: none;
+        font-size: 1.5rem;
+        color: $negro;
+        padding: 0 1.3rem;
+      }
+
+      .btn {
+        margin-top: 0;
+        border-radius: 5rem;
+        background: $negro;
+        color: $blanco;
+
+        &:hover {
+          background: $blanco;
+          color: $negro;
+        }
       }
     }
   }

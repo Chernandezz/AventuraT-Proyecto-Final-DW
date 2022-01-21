@@ -40,7 +40,7 @@
   color: #10221b;
 }
 
-.categorias .contenedor {
+.categorias .contenedor-caja {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
   gap: 2rem;
@@ -60,36 +60,6 @@
   color: #219150;
 }
 .categorias .caja p {
-  font-size: 1.5rem;
-  color: #10221b;
-  padding: 1rem 0;
-  line-height: 2;
-}
-
-.nosotros {
-  background-color: #eee;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-.nosotros .imagen {
-  flex: 1 1 42rem;
-  padding-right: 5rem;
-  padding-bottom: 5rem;
-}
-.nosotros .imagen img {
-  width: 100%;
-  box-shadow: 4rem 4rem 0 rgba(0, 0, 0, 0.1);
-}
-.nosotros .contenido {
-  flex: 1 1 42rem;
-}
-.nosotros .contenido h3 {
-  font-size: 3rem;
-  color: #219150;
-}
-.nosotros .contenido p {
   font-size: 1.5rem;
   color: #10221b;
   padding: 1rem 0;
@@ -156,184 +126,60 @@
 .paquetes {
   background: #eee;
 }
-.paquetes .contenedor {
+.paquetes .caja-contenedor {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
   gap: 2rem;
 }
-.paquetes .contenedor .caja {
+.paquetes .caja-contenedor .caja {
   text-align: center;
   background: #fff;
   border: 0.2rem solid #10221b;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
 }
-.paquetes .contenedor .caja:hover {
+.paquetes .caja-contenedor .caja:hover {
   background: #10221b;
 }
-.paquetes .contenedor .caja:hover .contenido > * {
+.paquetes .caja-contenedor .caja:hover .contenido > * {
   color: #fff;
 }
-.paquetes .contenedor .caja:hover .btn {
+.paquetes .caja-contenedor .caja:hover .btn {
   border-color: #fff;
 }
-.paquetes .contenedor .caja:hover .btn:hover {
+.paquetes .caja-contenedor .caja:hover .btn:hover {
   color: #10221b;
   background: #fff;
 }
-.paquetes .contenedor .caja .imagen {
+.paquetes .caja-contenedor .caja .imagen {
   height: 25rem;
   overflow: hidden;
   padding: 2rem;
   padding-bottom: 0;
   border-radius: 0.5rem;
 }
-.paquetes .contenedor .caja .imagen img {
+.paquetes .caja-contenedor .caja .imagen img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   border-radius: 0.5rem;
 }
-.paquetes .contenedor .caja .contenido {
+.paquetes .caja-contenedor .caja .contenido {
   padding: 2rem;
 }
-.paquetes .contenedor .caja .contenido h3 {
+.paquetes .caja-contenedor .caja .contenido h3 {
   font-size: 2rem;
   color: #10221b;
 }
-.paquetes .contenedor .caja .contenido p {
+.paquetes .caja-contenedor .caja .contenido p {
   font-size: 1.5rem;
   color: #10221b;
   padding: 1rem 0;
   line-height: 2;
 }
-.paquetes .contenedor .caja .contenido .precio {
+.paquetes .caja-contenedor .caja .contenido .precio {
   font-size: 2rem;
   color: #219150;
-}
-
-.experiencias .slide .texto {
-  padding: 2rem;
-  font-size: 1.5rem;
-  font-style: italic;
-  background-color: #eee;
-  border-radius: 0.5rem;
-  color: #10221b;
-  line-height: 2;
-  position: relative;
-  z-index: 0;
-  margin-bottom: 3rem;
-}
-.experiencias .slide .texto::before {
-  content: "";
-  position: absolute;
-  bottom: -1.5rem;
-  left: 0.7rem;
-  height: 3rem;
-  width: 3rem;
-  background: #eee;
-  transform: rotate(45deg);
-}
-.experiencias .slide .usuario {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.experiencias .slide img {
-  height: 7rem;
-  width: 7rem;
-  border-radius: 50%;
-}
-.experiencias .slide h3 {
-  font-size: 2rem;
-  color: #10221b;
-}
-.experiencias .slide span {
-  color: #219150;
-  font-size: 1.5rem;
-}
-
-.servicios {
-  background: #eee;
-}
-.servicios .contenedor {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
-  gap: 2rem;
-}
-.servicios .contenedor .caja {
-  text-align: center;
-  padding: 2rem;
-  border: 0.2rem solid #10221b;
-  border-radius: 0.5rem;
-  background-color: #fff;
-}
-.servicios .contenedor .caja:hover {
-  background-color: #10221b;
-}
-.servicios .contenedor .caja:hover img {
-  filter: invert(1);
-}
-.servicios .contenedor .caja:hover p {
-  color: #fff;
-}
-.servicios .contenedor .caja:hover .btn {
-  border-color: #fff;
-  color: #fff;
-}
-.servicios .contenedor .caja:hover .btn:hover {
-  background-color: #fff;
-  color: #10221b;
-}
-.servicios .contenedor .caja img {
-  height: 10rem;
-  margin-bottom: 1rem;
-}
-.servicios .contenedor .caja h3 {
-  font-size: 2rem;
-  color: #219150;
-}
-.servicios .contenedor .caja p {
-  font-size: 1.5rem;
-  color: #10221b;
-  padding: 1rem 0;
-  line-height: 2;
-}
-
-.suscripcion .contenido {
-  max-width: 70rem;
-  margin: 1rem auto;
-  text-align: center;
-}
-.suscripcion .contenido p {
-  font-size: 1.5rem;
-  line-height: 2;
-  color: #10221b;
-}
-.suscripcion .contenido form {
-  margin-top: 2rem;
-  background-color: #fff;
-  border-radius: 5rem;
-  border: 0.2rem solid #10221b;
-  padding: 0.7rem;
-  display: flex;
-}
-.suscripcion .contenido form .email {
-  width: 100%;
-  background: none;
-  font-size: 1.5rem;
-  color: #10221b;
-  padding: 0 1.3rem;
-}
-.suscripcion .contenido form .btn {
-  margin-top: 0;
-  border-radius: 5rem;
-  background: #10221b;
-  color: #fff;
-}
-.suscripcion .contenido form .btn:hover {
-  background: #fff;
-  color: #10221b;
 }
 
 .header {
@@ -446,50 +292,6 @@
   color: #219150;
 }
 
-.footer {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../img/footer-bg.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-.footer .contenedor {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 2rem;
-}
-.footer .contenedor .caja h3 {
-  font-size: 2rem;
-  padding: 1.5rem 0;
-  color: #fff;
-}
-.footer .contenedor .caja a {
-  display: block;
-  font-size: 1.4rem;
-  color: #fff;
-  padding: 1rem 0;
-}
-.footer .contenedor .caja a i {
-  color: #219150;
-  padding-right: 0.5rem;
-}
-.footer .contenedor .caja a:hover {
-  color: #219150;
-}
-.footer .contenedor .caja a:hover i {
-  padding-right: 2rem;
-}
-.footer .creditos {
-  text-align: center;
-  margin-top: 2.5rem;
-  padding: 1rem;
-  padding-top: 2.5rem;
-  font-size: 2rem;
-  color: #fff;
-}
-.footer .creditos span {
-  color: #219150;
-}
-
 * {
   font-family: "Poppins", sans-serif;
 }
@@ -560,7 +362,6 @@ section {
 @media (max-width: 991px) {
   html {
     font-size: 55%;
-    scroll-padding-bottom: 7rem;
   }
 
   .inicio .caja {

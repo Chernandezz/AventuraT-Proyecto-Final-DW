@@ -1,0 +1,53 @@
+@use "../abstracts/abstracts" as *;
+
+.footer {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../img/footer-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  .contenedor {
+    @include grid(25rem);
+
+    .caja {
+      h3 {
+        font-size: 2rem;
+        padding: 1.5rem 0;
+        color: $blanco;
+      }
+
+      a {
+        display: block;
+        font-size: 1.4rem;
+        color: $blanco;
+        padding: 1rem 0;
+
+        i {
+          color: $verde;
+          padding-right: 0.5rem;
+        }
+
+        &:hover {
+          color: $verde;
+          i {
+            padding-right: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .creditos {
+    text-align: center;
+    margin-top: 2.5rem;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: $blanco;
+
+    span {
+      color: $verde;
+    }
+  }
+}
