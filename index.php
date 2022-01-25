@@ -1,59 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aventura</title>
-    <!-- Link Iconos Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
-    />
-    <!-- Link CSS -->
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <!-- Inicio Header -->
-    <div class="header">
-      <a href="" class="logo"> <i class="fas fa-hiking"></i> AventuraT </a>
-
-      <nav class="navegacion">
-        <div id="cerrar-nav" class="fas fa-times"></div>
-        <a href="#inicio">inicio</a>
-        <a href="#tienda">tienda</a>
-        <a href="#paquetes">paquetes</a>
-        <a href="#experiencias">experiencias</a>
-      </nav>
-
-      <div class="iconos">
-        <div id="btn-menu" class="fas fa-bars"></div>
-        <a href="" class="fas fa-user"></a>
-        <a href="" class="fas fa-shopping-cart"></a>
-        <div id="btn-buscar" class="fas fa-search"></div>
-      </div>
-    </div>
-    <!-- Fin Header -->
-    <!-- Inicio Buscar -->
-    <div class="buscador">
-      <div id="cerrar-buscador" class="fas fa-times"></div>
-
-      <form action="">
-        <input
-          type="search"
-          name=""
-          placeholder="Buscar..."
-          id="caja-buscador"
-        />
-        <label for="caja-buscador" class="fas fa-search"></label>
-      </form>
-    </div>
-    <!-- Fin Buscar -->
+<?php include 'includes/templates/header.php';?>
 
     <!-- Inicio Inicio -->
     <section class="inicio" id="inicio">
@@ -378,7 +323,7 @@
               Laboriosam, corporis.
             </p>
             <div class="precio">$250.000 - $700.000</div>
-            <a href="#" class="btn">explorar ahora</a>
+            <a href="paquete.php" class="btn">explorar ahora</a>
           </div>
         </div>
         <!-- Fin Paquete -->
@@ -395,7 +340,7 @@
               Laboriosam, corporis.
             </p>
             <div class="precio">$250.000 - $700.000</div>
-            <a href="#" class="btn">explorar ahora</a>
+            <a href="paquete.php" class="btn">explorar ahora</a>
           </div>
         </div>
         <!-- Fin Paquete -->
@@ -412,7 +357,7 @@
               Laboriosam, corporis.
             </p>
             <div class="precio">$250.000 - $700.000</div>
-            <a href="#" class="btn">explorar ahora</a>
+            <a href="paquete.php" class="btn">explorar ahora</a>
           </div>
         </div>
         <!-- Fin Paquete -->
@@ -429,7 +374,7 @@
               Laboriosam, corporis.
             </p>
             <div class="precio">$250.000 - $700.000</div>
-            <a href="#" class="btn">explorar ahora</a>
+            <a href="paquete.php" class="btn">explorar ahora</a>
           </div>
         </div>
         <!-- Fin Paquete -->
@@ -446,7 +391,7 @@
               Laboriosam, corporis.
             </p>
             <div class="precio">$250.000 - $700.000</div>
-            <a href="#" class="btn">explorar ahora</a>
+            <a href="paquete.php" class="btn">explorar ahora</a>
           </div>
         </div>
         <!-- Fin Paquete -->
@@ -463,7 +408,7 @@
               Laboriosam, corporis.
             </p>
             <div class="precio">$250.000 - $700.000</div>
-            <a href="#" class="btn">explorar ahora</a>
+            <a href="paquete.php" class="btn">explorar ahora</a>
           </div>
         </div>
         <!-- Fin Paquete -->
@@ -681,58 +626,4 @@
     </section>
     <!-- Fin Seccion Suscripciones -->
 
-    <!-- Inicio Footer -->
-    <section class="footer">
-      <div class="contenedor">
-        <div class="caja">
-          <h3>links rapidos</h3>
-          <a href="#inicio">inicio</a>
-          <a href="#tienda">tienda</a>
-          <a href="#paquetes">paquetes</a>
-          <a href="#experiencias">experiencias</a>
-        </div>
-
-        <div class="caja">
-          <h3>links extra</h3>
-          <a href="#">cuenta</a>
-          <a href="#">ordenes</a>
-          <a href="#">favoritos</a>
-          <a href="#">FAQ</a>
-          <a href="#">terminos de servicio</a>
-          <a href="#">politicas de privacidad</a>
-        </div>
-
-        <div class="caja">
-          <h3>contacto</h3>
-          <a href="#"><i class="fas fa-phone"></i> +57 3017707071 </a>
-          <a href="#"><i class="fas fa-phone"></i> Telefono leo </a>
-          <a href="#"
-            ><i class="fas fa-envelope"></i> chernandezz@unal.edu.co
-          </a>
-          <a href="#"><i class="fas fa-envelope"></i> correo leo </a>
-          <a href="#"><i class="fas fa-map"></i> manizales, caldas - 170009 </a>
-        </div>
-
-        <div class="caja">
-          <h3>siguenos</h3>
-          <a href="#"><i class="fab fa-facebook"></i> facebook </a>
-          <a href="#"><i class="fab fa-twitter"></i> twitter </a>
-          <a href="#"><i class="fab fa-instagram"></i> instagram </a>
-          <a href="#"><i class="fab fa-linkedin"></i> linkedin </a>
-          <a href="#"><i class="fab fa-github"></i> github </a>
-        </div>
-      </div>
-
-      <div class="creditos">
-        creado por <span>Cristian Hernandez</span> &
-        <span>Leandro Garces</span> | Todos los derechos reservados <br />
-        con base en Mr. Web Designer
-      </div>
-    </section>
-    <!-- Fin Footer -->
-
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <!-- link JS -->
-    <script src="script/script.js"></script>
-  </body>
-</html>
+<?php include 'includes/templates/footer.php'?>
