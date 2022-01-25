@@ -1,4 +1,7 @@
-<?php include 'includes/templates/header.php';?>
+<?php
+require 'includes/funciones.php';
+incluirTemplate('header');
+?>
 
     <!-- Inicio Inicio -->
     <section class="inicio" id="inicio">
@@ -626,4 +629,5 @@
     </section>
     <!-- Fin Seccion Suscripciones -->
 
-<?php include 'includes/templates/footer.php'?>
+<?php
+incluirTemplate('footer');

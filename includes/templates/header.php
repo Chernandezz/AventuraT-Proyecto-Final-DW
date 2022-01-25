@@ -26,7 +26,7 @@
       <nav class="navegacion">
         <div id="cerrar-nav" class="fas fa-times"></div>
         <a href="index.php">inicio</a>
-        <a href="#tienda">tienda</a>
+        <a href="#tienda">productos</a>
         <a href="#paquetes">paquetes</a>
         <a href="#experiencias">experiencias</a>
       </nav>
