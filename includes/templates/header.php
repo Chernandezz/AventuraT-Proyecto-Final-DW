@@ -16,24 +16,24 @@
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
     <!-- Link CSS -->
-    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body>
     <!-- Inicio Header -->
     <div class="header">
-      <a href="index.php" class="logo"> <i class="fas fa-hiking"></i> AventuraT </a>
+      <a href="/index.php" class="logo"> <i class="fas fa-hiking"></i> AventuraT </a>
 
       <nav class="navegacion">
         <div id="cerrar-nav" class="fas fa-times"></div>
-        <a href="index.php">inicio</a>
-        <a href="#tienda">productos</a>
-        <a href="#paquetes">paquetes</a>
-        <a href="#experiencias">experiencias</a>
+        <a href="/index.php">inicio</a>
+        <a href="/index.php#tienda">productos</a>
+        <a href="/index.php#paquetes">paquetes</a>
+        <a href="/index.php#experiencias">experiencias</a>
       </nav>
 
       <div class="iconos">
         <div id="btn-menu" class="fas fa-bars"></div>
-        <a href="usuario.php" class="fas fa-user"></a>
+        <a href="/usuario.php" class="fas fa-user"></a>
         <a href="" class="fas fa-shopping-cart"></a>
         <div id="btn-buscar" class="fas fa-search"></div>
       </div>

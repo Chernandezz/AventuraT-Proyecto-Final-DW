@@ -1,7 +1,12 @@
-<?php include 'includes/templates/header.php';?>
+<?php
+require 'includes/funciones.php';
+incluirTemplate('header');
+?>
 
-<section class="">
+
+<section class="" style="height: 100vh;">
 
 </section>
 
-<?php include 'includes/templates/footer.php';?>
+<?php
+incluirTemplate('footer');
