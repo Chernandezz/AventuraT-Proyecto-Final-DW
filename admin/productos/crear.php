@@ -1,4 +1,14 @@
 <?php
+require "../../includes/config/database.php";
+$db = conectarDB();
+
+if ($_SERVER["REQUEST_METHOD"] == 'POST') {
+    echo "<pre>";
+    var_dump($_POST['titulo']);
+    echo "</pre>";
+
+}
+
 require '../../includes/funciones.php';
 incluirTemplate('header');
 ?>
@@ -8,29 +18,34 @@ incluirTemplate('header');
 
     <h2 class="encabezadoCRUD">nuevo producto</h2>
 
-    <form class="formulario" method="" enctype="">
+    <form class="formulario formCRUD" method="POST" enctype="">
         <fieldset>
                 <div class="caja">
-                    <label for="nombre">nombre</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Lucas Hernandez" value="" disabled>
+                    <label for="titulo">titulo</label>
+                    <input type="text" name="titulo" id="titulo" placeholder="titulo producto">
                 </div>
 
                 <div class="caja">
-                    <label for="email">email</label>
-                    <input type="email" name="email" id="email" placeholder="cristianfzhernandez@gmail.com" disabled>
+                    <label for="precio">precio</label>
+                    <input type="number" name="precio" id="precio" placeholder="precio producto">
                 </div>
 
                 <div class="caja">
-                    <label for="direccion">direccion</label>
-                    <input type="text" name="direccion" id="direccion" placeholder="Bajo Tablazo casa 120" disabled>
+                    <label for="imagen">imagen</label>
+                    <input type="file" name="imagen" id="imagen" accept="image/jpeg, image/png">
                 </div>
 
                 <div class="caja">
-                    <label for="cedula">cedula</label>
-                    <input type="text" name="cedula" id="cedula" placeholder="1002634007" disabled>
+                    <label for="descripcion">descripción</label>
+                    <textarea name="descripcion" id="descripcion"></textarea>
+                </div>
+
+                <div class="caja">
+                    <label for="cantidad">cantidad</label>
+                    <input type="number" name="cantidad" id="cantidad" placeholder="cantidad disponible" min="1">
                 </div>
         </fieldset>
-        <input type="submit" value="crear" class="btn">
+        <input type="submit" value="crear producto" class="btn">
     </form>
 
     <div class="lista-botones">
