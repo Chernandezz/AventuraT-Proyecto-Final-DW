@@ -62,7 +62,6 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
             header("Location: /admin?accion=1");
         }
     }
-
 }
 
 require '../../includes/funciones.php';
