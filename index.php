@@ -15,6 +15,7 @@ incluirTemplate('header');
               <div class="contenido">
                 <span>nunca pares de</span>
                 <h3>explorar</h3>
+                <h1>Hola perrassssss</h1>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Libero deleniti maiores soluta nisi? Excepturi odit
