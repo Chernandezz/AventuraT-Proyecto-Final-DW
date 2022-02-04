@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 
         if ($resultado) {
             // Redireccionar al Usuario
-            header("Location: /admin?accion=1");
+            header("Location: /admin/productos?accion=1");
         }
     }
 
@@ -111,7 +111,7 @@ incluirTemplate('header');
     </form>
 
     <div class="lista-botones">
-        <a class="btn" onclick="regresar()" >regresar</a>
+        <a class="btn" href="/admin/productos" >regresar</a>
     </div>
 
 </section>
