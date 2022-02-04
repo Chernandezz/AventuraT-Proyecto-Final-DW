@@ -44,55 +44,55 @@ window.onload = () => {
 // Sliders
 
 var swiper = new Swiper(".slider-inicio", {
-  loop : true,
-  grabCursor : true,
-  navigation : {
-    nextEl : ".swiper-button-next",
-    prevEl : ".swiper-button-prev",
+  loop: true,
+  grabCursor: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });
 
 var swiper = new Swiper(".slider-productos", {
-  loop : true,
-  grabCursor : true,
-  spaceBetween : 20,
-  navigation : {
-    nextEl : ".swiper-button-next",
-    prevEl : ".swiper-button-prev",
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
-  breakpoints : {
-    0 : {
-      slidesPerView : 1,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
     },
-    640 : {
-      slidesPerView : 2,
+    640: {
+      slidesPerView: 2,
     },
-    768 : {
-      slidesPerView : 3,
+    768: {
+      slidesPerView: 3,
     },
-    1024 : {
-      slidesPerView : 4,
+    1024: {
+      slidesPerView: 4,
     },
   },
 });
 
 var swiper = new Swiper(".slider-experiencias", {
-  loop : true,
-  grabCursor : true,
-  spaceBetween : 20,
-  navigation : {
-    nextEl : ".swiper-button-next",
-    prevEl : ".swiper-button-prev",
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
-  breakpoints : {
-    0 : {
-      slidesPerView : 1,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
     },
-    640 : {
-      slidesPerView : 2,
+    640: {
+      slidesPerView: 2,
     },
-    768 : {
-      slidesPerView : 3,
+    768: {
+      slidesPerView: 3,
     },
   },
 });
