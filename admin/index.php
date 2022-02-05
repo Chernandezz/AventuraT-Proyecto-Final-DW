@@ -12,7 +12,7 @@ incluirTemplate('header');
     <div class="lista-botones">
         <a class="btn" onclick="regresar()" >regresar</a>
         <a class="btn" href="/admin/productos" >productos</a>
-        <a class="btn" href="#" >paquetes</a>
+        <a class="btn" href="/admin/paquetes" >paquetes</a>
         <a class="btn" href="#" >Cerrar Sesión</a>
     </div>
 
