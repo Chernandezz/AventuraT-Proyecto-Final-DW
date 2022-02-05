@@ -48,6 +48,10 @@ incluirTemplate('header');
         <div class="alerta exito">
             <?php echo 'producto creado correctamente'; ?>
         </div>
+    <?php elseif ((intval($accion) === 2)): ?>
+        <div class="alerta exito">
+            <?php echo 'producto actualizado correctamente'; ?>
+        </div>
     <?php elseif ((intval($accion) === 3)): ?>
         <div class="alerta exito">
             <?php echo 'producto eliminado correctamente'; ?>
@@ -86,7 +90,7 @@ incluirTemplate('header');
 
                             <input type="submit" value="Eliminar">
                         </form>
-                        <a href="admin/propiedades/actualizar.php?id=<?php echo $item['id']; ?>">Editar</a>
+                        <a href="/admin/productos/actualizar.php?id=<?php echo $item['id']; ?>">Editar</a>
                     </td>
                 </tr>
                 <?php endwhile;?>

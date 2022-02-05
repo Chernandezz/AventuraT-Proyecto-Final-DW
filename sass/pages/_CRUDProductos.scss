@@ -145,3 +145,18 @@ table.tabla-productos {
     }
   }
 }
+
+.admin-imagenes {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  gap: 1rem;
+  align-items: center;
+  img {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+  }
+}

@@ -598,6 +598,21 @@ table.tabla-productos tr .acciones-crud a {
   margin-right: 1rem;
 }
 
+.admin-imagenes {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  gap: 1rem;
+  align-items: center;
+}
+.admin-imagenes img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+}
+
 .header {
   position: fixed;
   top: 0;
