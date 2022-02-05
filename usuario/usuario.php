@@ -1,20 +1,25 @@
 <?php
 
-require 'includes/funciones.php';
+require '../includes/funciones.php';
 incluirTemplate('header');
+
+if (!estaAutenticado()) {
+    header('Location: /usario/iniciar_sesion.php');
+}
 
 ?>
 
 <section class="pagina-usuario">
     <div class="imagenes">
         <div class="usuario">
-            <img src="img/pic-1.png" alt="" />
+            <img src="/img/estandar-usuario.png" alt="" />
             <div class="info">
 
                 <h2>Lucas Hernandez</h2>
                 <h3>elemento: Agua <i class="fas fa-tint"></i></h3>
             </div>
         </div>
+        <a class="btn-cerrar-sesion" href="cerrar_sesion.php"><i class="fas fa-power-off"></i></a>
     </div>
         <form class="formulario" method="" enctype="">
             <fieldset>
