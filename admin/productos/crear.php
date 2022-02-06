@@ -99,7 +99,7 @@ incluirTemplate('header');
 
                 <div class="caja">
                     <label for="descripcion">descripción</label>
-                    <textarea name="descripcion" id="descripcion"><?php echo $descripcion ?></textarea>
+                    <textarea name="descripcion" id="descripcion" maxlength="40"><?php echo $descripcion ?></textarea>
                 </div>
 
                 <div class="caja">

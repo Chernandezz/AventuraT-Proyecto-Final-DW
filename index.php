@@ -444,5 +444,14 @@ incluirTemplate('header');
     </section>
     <!-- Fin Seccion Suscripciones -->
 
+    <!-- Inicio Seccion Playlist -->
+    <section class="playlist">
+      <div class="contenido">
+        <h2 class="encabezado">Playlist para <span style="color: green;">Aventureros</span></h2>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0F1QFNawHwXpSFQSmuiF2b?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      </div>
+    </section>
+
+    <!-- Fin Seccion Playlist -->
 <?php
 incluirTemplate('footer');
