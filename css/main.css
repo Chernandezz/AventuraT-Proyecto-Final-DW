@@ -362,7 +362,9 @@
 .pagina-usuario .imagenes .usuario img {
   height: 20rem;
   width: 20rem;
+  overflow: hidden;
   border-radius: 50%;
+  object-fit: cover;
   border: 4px solid #fff;
 }
 .pagina-usuario .imagenes .usuario h2 {
@@ -375,8 +377,11 @@
   color: #fff;
   margin-left: 2rem;
 }
-.pagina-usuario .imagenes .usuario h3 i {
+.pagina-usuario .imagenes .usuario h3 i.fa-tint {
   color: aqua;
+}
+.pagina-usuario .imagenes .usuario h3 i.fa-fire {
+  color: orange;
 }
 
 .formulario {

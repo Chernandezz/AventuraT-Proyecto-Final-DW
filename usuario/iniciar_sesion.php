@@ -3,6 +3,10 @@
 require '../includes/funciones.php';
 incluirTemplate('header');
 
+if (estaAutenticado()) {
+    header('Location: /usuario/usuario.php');
+}
+
 require '../includes/config/database.php';
 $db = conectarDB();
 
