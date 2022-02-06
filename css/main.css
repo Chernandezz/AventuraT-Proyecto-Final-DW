@@ -336,6 +336,10 @@
   color: #10221b;
 }
 
+.playlist {
+  background: #eee;
+}
+
 .pagina-usuario {
   height: 100vh;
   background-color: #ffffff;
