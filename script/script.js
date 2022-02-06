@@ -41,11 +41,6 @@ window.onload = () => {
   }
 };
 
-// Boton Regresar
-function regresar() {
-  window.history.back();
-}
-
 // Sliders
 
 var swiper = new Swiper(".slider-inicio", {

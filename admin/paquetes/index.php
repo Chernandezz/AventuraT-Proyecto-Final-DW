@@ -6,12 +6,12 @@ require '../../includes/funciones.php';
 $db = conectarDB();
 
 // Escribimos el query
-$query = "SELECT * FROM productos";
+$query = "SELECT * FROM paquetes";
 
 // Consultar la BD
 $resultado = mysqli_query($db, $query);
 
-// Mensaje de que se creo bien un producto
+// Mensaje de que se creo bien un paquete
 $accion = $_GET['accion'] ?? null;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($id) {
 
         // Eliminar el archivo
-        $query = "SELECT imagen FROM productos WHERE id = ${id}";
+        $query = "SELECT imagen FROM paquetes WHERE id = ${id}";
         $resultado = mysqli_query($db, $query);
         $resultado = mysqli_fetch_assoc($resultado);
         $nombreImagen = $resultado['imagen'];
@@ -29,10 +29,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         unlink('../../imagenes/' . $nombreImagen);
 
         // Eliminar la propiedad
-        $query = "DELETE FROM productos WHERE id = ${id}";
+        $query = "DELETE FROM paquetes WHERE id = ${id}";
         $resultado = mysqli_query($db, $query);
         if ($resultado) {
-            header("Location: /admin/productos?accion=3");
+            header("Location: /admin/paquetes?accion=3");
         }
     }
 }
@@ -43,23 +43,23 @@ incluirTemplate('header');
 
 <section class="fondo">
 
-    <h2 class="encabezadoCRUD">administración productos</h2>
+    <h2 class="encabezadoCRUD">administración paquetes</h2>
     <?php if (intval($accion) === 1): ?>
         <div class="alerta exito">
-            <?php echo 'producto creado correctamente'; ?>
+            <?php echo 'paquete creado correctamente'; ?>
         </div>
     <?php elseif ((intval($accion) === 2)): ?>
         <div class="alerta exito">
-            <?php echo 'producto actualizado correctamente'; ?>
+            <?php echo 'paquete actualizado correctamente'; ?>
         </div>
     <?php elseif ((intval($accion) === 3)): ?>
         <div class="alerta exito">
-            <?php echo 'producto eliminado correctamente'; ?>
+            <?php echo 'paquete eliminado correctamente'; ?>
         </div>
     <?php endif;?>
     <div class="lista-botones">
         <a class="btn" href="/admin" >regresar</a>
-        <a class="btn" href="/admin/productos/crear.php" >nuevo producto</a>
+        <a class="btn" href="/admin/paquetes/crear.php" >nuevo paquete</a>
     </div>
 
     <table class="tabla-productos">
@@ -70,7 +70,6 @@ incluirTemplate('header');
                     <th>precio</th>
                     <th>imagen</th>
                     <th>descripción</th>
-                    <th>cantidad</th>
                     <th>acciones</th>
                 </tr>
             </thead>
@@ -81,7 +80,6 @@ incluirTemplate('header');
                     <td><?php echo $item['titulo']; ?></td>
                     <td>$<?php echo round($item['precio'], 0); ?></td>
                     <td><?php echo $item['descripcion']; ?></td>
-                    <td><?php echo $item['cantidad']; ?></td>
 
                     <td> <img class="imagen-tabla" src="/imagenes/<?php echo $item['imagen']; ?>" alt=""> </td>
                     <td class="acciones-crud">
@@ -90,7 +88,7 @@ incluirTemplate('header');
 
                             <input type="submit" value="Eliminar">
                         </form>
-                        <a href="/admin/productos/actualizar.php?id=<?php echo $item['id']; ?>">Editar</a>
+                        <a href="/admin/paquetes/actualizar.php?id=<?php echo $item['id']; ?>">Editar</a>
                     </td>
                 </tr>
                 <?php endwhile;?>

@@ -8,15 +8,15 @@ $id = filter_var($id, FILTER_VALIDATE_INT);
 
 // Validamos que sea un id valido
 if (!$id) {
-    header("Location: /admin/productos");
+    header("Location: /admin/paquetes");
 }
 
 // Conectamos a la BD
 require "../../includes/config/database.php";
 $db = conectarDB();
 
-// query para obtener los datos del producto
-$query = "SELECT * FROM productos WHERE id = ${id}";
+// query para obtener los datos del paquete
+$query = "SELECT * FROM paquetes WHERE id = ${id}";
 $resultado = mysqli_query($db, $query);
 
 $item = mysqli_fetch_assoc($resultado);
@@ -25,14 +25,12 @@ $errores = [];
 $titulo = $item['titulo'];
 $precio = $item['precio'];
 $descripcion = $item['descripcion'];
-$cantidad = $item['cantidad'];
 $nombreImagen = $item['imagen'];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $titulo = mysqli_real_escape_string($db, $_POST['titulo']);
     $precio = mysqli_real_escape_string($db, $_POST['precio']);
     $descripcion = mysqli_real_escape_string($db, $_POST['descripcion']);
-    $cantidad = mysqli_real_escape_string($db, $_POST['cantidad']);
 
     // Asignar super globlar $_FILES a una variable
     $imagen = $_FILES['imagen'];
@@ -42,9 +40,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     if (!$precio) {
         $errores[] = 'el precio es requerido';
-    }
-    if (!$cantidad) {
-        $errores[] = 'la cantidad es requerida';
     }
 
     if (empty($errores)) {
@@ -71,13 +66,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         // Insertar en la base de datos
-        $query = "UPDATE productos SET titulo = '${titulo}', precio = ${precio}, imagen = '${nombreImagen}', descripcion = '${descripcion}', cantidad = ${cantidad} WHERE id = ${id}";
+        $query = "UPDATE paquetes SET titulo = '${titulo}', precio = ${precio}, imagen = '${nombreImagen}', descripcion = '${descripcion}' WHERE id = ${id}";
 
         $resultado = mysqli_query($db, $query);
 
         if ($resultado) {
             // Redireccionar al Usuario
-            header("Location: /admin/productos?accion=2");
+            header("Location: /admin/paquetes?accion=2");
         }
 
     }
@@ -101,12 +96,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <fieldset>
                 <div class="caja">
                     <label for="titulo">titulo</label>
-                    <input type="text" name="titulo" id="titulo" placeholder="titulo producto" value="<?php echo $titulo ?>">
+                    <input type="text" name="titulo" id="titulo" placeholder="titulo paquete" value="<?php echo $titulo ?>">
                 </div>
 
                 <div class="caja">
                     <label for="precio">precio</label>
-                    <input type="number" name="precio" id="precio" placeholder="precio producto" value="<?php echo $precio ?>">
+                    <input type="number" name="precio" id="precio" placeholder="precio paquete" value="<?php echo $precio ?>">
                 </div>
 
                 <div class="caja">
@@ -122,17 +117,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <label for="descripcion">descripción</label>
                     <textarea name="descripcion" id="descripcion"><?php echo $descripcion ?></textarea>
                 </div>
-
-                <div class="caja">
-                    <label for="cantidad">cantidad</label>
-                    <input type="number" name="cantidad" id="cantidad" placeholder="cantidad disponible" min="1" value="<?php echo $cantidad ?>">
-                </div>
         </fieldset>
-        <input type="submit" value="actualizar producto" class="btn">
+        <input type="submit" value="actualizar paquete" class="btn">
     </form>
 
     <div class="lista-botones">
-        <a class="btn" href="/admin/productos" >regresar</a>
+        <a class="btn" href="/admin/paquetes" >regresar</a>
     </div>
 
 </section>
