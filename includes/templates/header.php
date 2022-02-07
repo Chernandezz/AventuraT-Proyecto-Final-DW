@@ -33,7 +33,7 @@
 
       <div class="iconos">
         <div id="btn-menu" class="fas fa-bars"></div>
-        <a href="/usuario.php" class="fas fa-user"></a>
+        <a href="/usuario/iniciar_sesion.php" class="fas fa-user"></a>
         <a href="" class="fas fa-shopping-cart"></a>
         <div id="btn-buscar" class="fas fa-search"></div>
       </div>

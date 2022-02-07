@@ -7,13 +7,11 @@ $errores = [];
 $titulo = "";
 $precio = "";
 $descripcion = "";
-$cantidad = "";
 
 if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     $titulo = mysqli_real_escape_string($db, $_POST['titulo']);
     $precio = mysqli_real_escape_string($db, $_POST['precio']);
     $descripcion = mysqli_real_escape_string($db, $_POST['descripcion']);
-    $cantidad = mysqli_real_escape_string($db, $_POST['cantidad']);
 
     // Asignar super globlar $_FILES a una variable
     $imagen = $_FILES['imagen'];
@@ -23,9 +21,6 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     }
     if (!$precio) {
         $errores[] = 'el precio es requerido';
-    }
-    if (!$cantidad) {
-        $errores[] = 'la cantidad es requerida';
     }
 
     // Validacion Imagen
@@ -53,13 +48,13 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
         move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . $nombreImagen);
 
         // Insertar en la base de datos
-        $query = "INSERT INTO productos (titulo, precio, imagen, descripcion, cantidad) VALUES ('$titulo', '$precio', '$nombreImagen', '$descripcion', '$cantidad');";
+        $query = "INSERT INTO paquetes (titulo, precio, imagen, descripcion) VALUES ('$titulo', '$precio', '$nombreImagen', '$descripcion');";
 
         $resultado = mysqli_query($db, $query);
 
         if ($resultado) {
             // Redireccionar al Usuario
-            header("Location: /admin/productos?accion=1");
+            header("Location: /admin/paquetes?accion=1");
         }
     }
 
@@ -72,7 +67,7 @@ incluirTemplate('header');
 
 <section class="fondo">
 
-    <h2 class="encabezadoCRUD">nuevo producto</h2>
+    <h2 class="encabezadoCRUD">nuevo paquete</h2>
 
     <?php foreach ($errores as $error): ?>
         <div class="alerta error">
@@ -84,12 +79,12 @@ incluirTemplate('header');
         <fieldset>
                 <div class="caja">
                     <label for="titulo">titulo</label>
-                    <input type="text" name="titulo" id="titulo" placeholder="titulo producto" value="<?php echo $titulo ?>">
+                    <input type="text" name="titulo" id="titulo" placeholder="titulo paquete" value="<?php echo $titulo ?>">
                 </div>
 
                 <div class="caja">
                     <label for="precio">precio</label>
-                    <input type="number" name="precio" id="precio" placeholder="precio producto" value="<?php echo $precio ?>">
+                    <input type="number" name="precio" id="precio" placeholder="precio paquete" value="<?php echo $precio ?>">
                 </div>
 
                 <div class="caja">
@@ -99,19 +94,14 @@ incluirTemplate('header');
 
                 <div class="caja">
                     <label for="descripcion">descripción</label>
-                    <textarea name="descripcion" id="descripcion" maxlength="40"><?php echo $descripcion ?></textarea>
-                </div>
-
-                <div class="caja">
-                    <label for="cantidad">cantidad</label>
-                    <input type="number" name="cantidad" id="cantidad" placeholder="cantidad disponible" min="1" value="<?php echo $cantidad ?>">
+                    <textarea name="descripcion" id="descripcion"><?php echo $descripcion ?></textarea>
                 </div>
         </fieldset>
-        <input type="submit" value="crear producto" class="btn">
+        <input type="submit" value="crear paquete" class="btn">
     </form>
 
     <div class="lista-botones">
-        <a class="btn" href="/admin/productos" >regresar</a>
+        <a class="btn" href="/admin/paquetes" >regresar</a>
     </div>
 
 </section>

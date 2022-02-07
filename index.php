@@ -1,4 +1,22 @@
 <?php
+
+require "includes/config/database.php";
+$db = conectarDB();
+
+$query = "SELECT * FROM productos";
+
+$resultadoProductos = mysqli_query($db, $query);
+
+$query = "SELECT * FROM paquetes";
+$resultadoPaquetes = mysqli_query($db, $query);
+
+if ($_SERVER["REQUEST_METHOD"] == 'POST') {
+    $email = mysqli_real_escape_string($db, $_POST['email']);
+
+    $query = "INSERT INTO suscripciones (email) VALUES ('$email');";
+    $resultado = mysqli_query($db, $query);
+}
+
 require 'includes/funciones.php';
 incluirTemplate('header');
 ?>
@@ -158,9 +176,10 @@ incluirTemplate('header');
       <div class="swiper slider-productos">
         <div class="swiper-wrapper">
           <!-- Producto -->
+          <?php while ($item = mysqli_fetch_assoc($resultadoProductos)): ?>
           <div class="swiper-slide slide">
             <div class="imagen">
-              <img src="img/product-1.jpg" alt="" />
+              <img src="imagenes/<?php echo $item['imagen']; ?>" alt="" />
               <div class="iconos">
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-eye"></a>
@@ -168,8 +187,8 @@ incluirTemplate('header');
               </div>
             </div>
             <div class="contenido">
-              <h3>kits de supervivencia</h3>
-              <div class="precio">$170.000</div>
+              <h3><?php echo $item['titulo']; ?></h3>
+              <div class="precio">$<?php echo $item['precio']; ?></div>
               <div class="estrellas">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -179,126 +198,7 @@ incluirTemplate('header');
               </div>
             </div>
           </div>
-          <!-- Fin Producto -->
-
-          <!-- Producto -->
-          <div class="swiper-slide slide">
-            <div class="imagen">
-              <img src="img/product-2.jpg" alt="" />
-              <div class="iconos">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <a href="#" class="fas fa-share"></a>
-              </div>
-            </div>
-            <div class="contenido">
-              <h3>kits de supervivencia</h3>
-              <div class="precio">$170.000</div>
-              <div class="estrellas">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-              </div>
-            </div>
-          </div>
-          <!-- Fin Producto -->
-
-          <!-- Producto -->
-          <div class="swiper-slide slide">
-            <div class="imagen">
-              <img src="img/product-3.jpg" alt="" />
-              <div class="iconos">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <a href="#" class="fas fa-share"></a>
-              </div>
-            </div>
-            <div class="contenido">
-              <h3>kits de supervivencia</h3>
-              <div class="precio">$170.000</div>
-              <div class="estrellas">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-              </div>
-            </div>
-          </div>
-          <!-- Fin Producto -->
-
-          <!-- Producto -->
-          <div class="swiper-slide slide">
-            <div class="imagen">
-              <img src="img/product-4.jpg" alt="" />
-              <div class="iconos">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <a href="#" class="fas fa-share"></a>
-              </div>
-            </div>
-            <div class="contenido">
-              <h3>kits de supervivencia</h3>
-              <div class="precio">$170.000</div>
-              <div class="estrellas">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-              </div>
-            </div>
-          </div>
-          <!-- Fin Producto -->
-
-          <!-- Producto -->
-          <div class="swiper-slide slide">
-            <div class="imagen">
-              <img src="img/product-5.jpg" alt="" />
-              <div class="iconos">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <a href="#" class="fas fa-share"></a>
-              </div>
-            </div>
-            <div class="contenido">
-              <h3>kits de supervivencia</h3>
-              <div class="precio">$170.000</div>
-              <div class="estrellas">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-              </div>
-            </div>
-          </div>
-          <!-- Fin Producto -->
-
-          <!-- Producto -->
-          <div class="swiper-slide slide">
-            <div class="imagen">
-              <img src="img/product-6.jpg" alt="" />
-              <div class="iconos">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-eye"></a>
-                <a href="#" class="fas fa-share"></a>
-              </div>
-            </div>
-            <div class="contenido">
-              <h3>kits de supervivencia</h3>
-              <div class="precio">$170.000</div>
-              <div class="estrellas">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-              </div>
-            </div>
-          </div>
+          <?php endwhile;?>
           <!-- Fin Producto -->
         </div>
         <div class="swiper-button-next"></div>
@@ -315,105 +215,19 @@ incluirTemplate('header');
 
       <div class="contenedor">
         <!-- Paquete -->
-        <div class="caja">
-          <div class="imagen">
-            <img src="img/img-1.jpg" alt="" />
-          </div>
-          <div class="contenido">
-            <h3>tour destacado</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam, corporis.
-            </p>
-            <div class="precio">$250.000 - $700.000</div>
-            <a href="paquete.php" class="btn">explorar ahora</a>
-          </div>
-        </div>
-        <!-- Fin Paquete -->
-
-        <!-- Paquete -->
-        <div class="caja">
-          <div class="imagen">
-            <img src="img/img-2.jpg" alt="" />
-          </div>
-          <div class="contenido">
-            <h3>tour destacado</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam, corporis.
-            </p>
-            <div class="precio">$250.000 - $700.000</div>
-            <a href="paquete.php" class="btn">explorar ahora</a>
-          </div>
-        </div>
-        <!-- Fin Paquete -->
-
-        <!-- Paquete -->
-        <div class="caja">
-          <div class="imagen">
-            <img src="img/img-3.jpg" alt="" />
-          </div>
-          <div class="contenido">
-            <h3>tour destacado</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam, corporis.
-            </p>
-            <div class="precio">$250.000 - $700.000</div>
-            <a href="paquete.php" class="btn">explorar ahora</a>
-          </div>
-        </div>
-        <!-- Fin Paquete -->
-
-        <!-- Paquete -->
-        <div class="caja">
-          <div class="imagen">
-            <img src="img/img-4.jpg" alt="" />
-          </div>
-          <div class="contenido">
-            <h3>tour destacado</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam, corporis.
-            </p>
-            <div class="precio">$250.000 - $700.000</div>
-            <a href="paquete.php" class="btn">explorar ahora</a>
-          </div>
-        </div>
-        <!-- Fin Paquete -->
-
-        <!-- Paquete -->
-        <div class="caja">
-          <div class="imagen">
-            <img src="img/img-5.jpg" alt="" />
-          </div>
-          <div class="contenido">
-            <h3>tour destacado</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam, corporis.
-            </p>
-            <div class="precio">$250.000 - $700.000</div>
-            <a href="paquete.php" class="btn">explorar ahora</a>
-          </div>
-        </div>
-        <!-- Fin Paquete -->
-
-        <!-- Paquete -->
-        <div class="caja">
-          <div class="imagen">
-            <img src="img/img-6.jpg" alt="" />
-          </div>
-          <div class="contenido">
-            <h3>tour destacado</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam, corporis.
-            </p>
-            <div class="precio">$250.000 - $700.000</div>
-            <a href="paquete.php" class="btn">explorar ahora</a>
-          </div>
-        </div>
+        <?php while ($item = mysqli_fetch_assoc($resultadoPaquetes)): ?>
+	        <div class="caja">
+	          <div class="imagen">
+	            <img src="imagenes/<?php echo $item['imagen'] ?>" alt="" />
+	          </div>
+	          <div class="contenido">
+	            <h3><?php echo $item['titulo'] ?></h3>
+	            <p><?php echo $item['descripcion'] ?></p>
+	            <div class="precio">$<?php echo $item['precio'] ?></div>
+	            <a href="paquete.php?id=<?php echo $item['id'] ?>" class="btn">explorar ahora</a>
+	          </div>
+	        </div>
+	        <?php endwhile;?>
         <!-- Fin Paquete -->
       </div>
     </section>
@@ -615,13 +429,14 @@ incluirTemplate('header');
           magnam aut commodi dolores quo vitae sapiente temporibus, tempore
           pariatur?
         </p>
-        <form action="">
+        <form method="POST">
           <input
             type="email"
-            name=""
+            name="email"
             placeholder="ingresa tu email aqui"
-            id=""
+            id="email"
             class="email"
+            style="text-transform: none;"
           />
           <input type="submit" value="suscribirse" class="btn" />
         </form>
@@ -629,5 +444,14 @@ incluirTemplate('header');
     </section>
     <!-- Fin Seccion Suscripciones -->
 
+    <!-- Inicio Seccion Playlist -->
+    <section class="playlist">
+      <div class="contenido">
+        <h2 class="encabezado">Playlist para <span style="color: green;">Aventureros</span></h2>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0F1QFNawHwXpSFQSmuiF2b?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      </div>
+    </section>
+
+    <!-- Fin Seccion Playlist -->
 <?php
 incluirTemplate('footer');
