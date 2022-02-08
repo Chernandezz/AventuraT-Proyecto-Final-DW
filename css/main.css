@@ -340,6 +340,12 @@
   background: #eee;
 }
 
+.pokemones .contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .pagina-usuario {
   height: 100vh;
   background-color: #ffffff;
