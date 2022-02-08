@@ -62,7 +62,8 @@ while ($row = mysqli_fetch_array($get_user_list)) {
                     <td><?php echo $row['email'] ?></td>
                     <td><?php echo $row['tipousuario'] ?></td>
                 </tr>
-                <?php }?>
+                <?php
+}?>
             </tbody>
         </table>
     </div>

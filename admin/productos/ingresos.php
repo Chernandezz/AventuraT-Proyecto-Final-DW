@@ -60,8 +60,7 @@ while ($row = mysqli_fetch_array($get_product_list)) {
     ?>
                 <?php
 $subt = $row['cantidad'] * $row['precio'];
-    $total = $total + $subt;
-    ?>
+    $total = $total + $subt; ?>
                 <tr>
                     <td><?php echo $row['id'] ?></td>
                     <td><?php echo $row['titulo'] ?></td>
@@ -70,7 +69,8 @@ $subt = $row['cantidad'] * $row['precio'];
                     <td><?php echo $row['descripcion'] ?></td>
                     <td><?php echo $subt ?></td>
                 </tr>
-                <?php }?>
+                <?php
+}?>
             </tbody>
         </table>
         <h2 style=text-align:center;>El total es: $<?php echo $total ?></h2>

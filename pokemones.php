@@ -36,8 +36,7 @@ $pokemones = json_decode(curl_exec($ch));
 $cont = 0;
 foreach ($pokemones->pokemon as $pokemon) {
     $cont = $cont + 1;
-    $imgg = $pokemon->img;
-    ?>
+    $imgg = $pokemon->img; ?>
         <div class="card text-center">
             <div class="card-header">
                 Pokemon numero <?php echo $cont ?>
