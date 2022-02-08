@@ -60,6 +60,7 @@ incluirTemplate('header');
     <div class="lista-botones">
         <a class="btn" href="/admin" >regresar</a>
         <a class="btn" href="/admin/productos/crear.php" >nuevo producto</a>
+        <a class="btn" href="/admin/productos/ingresos.php" >ingresos</a>
     </div>
 
     <table class="tabla-productos">

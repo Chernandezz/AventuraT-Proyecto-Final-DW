@@ -453,5 +453,15 @@ incluirTemplate('header');
     </section>
 
     <!-- Fin Seccion Playlist -->
+
+    <!-- Inicio Seccion Pokemones -->
+    <section class="pokemones">
+      <div class="contenido">
+        <h2 class="encabezado">Pokemones para <span style="color: green;">Aventureros</span></h2>
+        <a href="pokemones.php" class="btn">Explorar</a>
+      </div>
+    </section>
+
+    <!-- Fin Seccion Pokemones -->
 <?php
 incluirTemplate('footer');
