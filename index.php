@@ -29,6 +29,7 @@ incluirTemplate('header');
             <div
               class="caja"
               style="background: url(img/home-bg-1.jpg) no-repeat"
+              title="Nunca pares de explorar"
             >
               <div class="contenido">
                 <span>nunca pares de</span>
@@ -49,6 +50,7 @@ incluirTemplate('header');
             <div
               class="caja segunda"
               style="background: url(img/home-bg-2.jpg) no-repeat"
+              title="Nunca pares de explorar"
             >
               <div class="contenido">
                 <span>una experiencia</span>
@@ -69,6 +71,7 @@ incluirTemplate('header');
             <div
               class="caja tercera"
               style="background: url(img/home-bg-3.jpg) no-repeat"
+              title="Nunca pares de explorar"
             >
               <div class="contenido">
                 <span>explora el</span>
@@ -97,7 +100,7 @@ incluirTemplate('header');
       <div class="contenedor">
         <!-- Una Categoria -->
         <div class="caja">
-          <img src="img/category-1.jpg" alt="" />
+          <img src="img/category-1.jpg" alt="bungee jumping" title="bungee jumping"/>
           <h3>bungee jumping</h3>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate,
@@ -108,7 +111,7 @@ incluirTemplate('header');
 
         <!-- Una Categoria -->
         <div class="caja">
-          <img src="img/category-2.jpg" alt="" />
+          <img src="img/category-2.jpg" alt="tirolinas" title="tirolinas"/>
           <h3>tirolinas</h3>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate,
@@ -119,7 +122,7 @@ incluirTemplate('header');
 
         <!-- Una Categoria -->
         <div class="caja">
-          <img src="img/category-3.jpg" alt="" />
+          <img src="img/category-3.jpg" alt="surfing" title="tirolinas"/>
           <h3>surfing</h3>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate,
@@ -130,7 +133,7 @@ incluirTemplate('header');
 
         <!-- Una Categoria -->
         <div class="caja">
-          <img src="img/category-4.jpg" alt="" />
+          <img src="img/category-4.jpg" alt="kayaking" title="kayaking"/>
           <h3>kayaking</h3>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate,
@@ -146,7 +149,7 @@ incluirTemplate('header');
 
     <section class="nosotros" id="nosotros">
       <div class="imagen">
-        <img src="img/about-img.jpg" alt="" />
+        <img src="img/about-img.jpg" alt="Viaje" title="Viaje"/>
       </div>
 
       <div class="contenido">
@@ -179,7 +182,7 @@ incluirTemplate('header');
           <?php while ($item = mysqli_fetch_assoc($resultadoProductos)): ?>
           <div class="swiper-slide slide">
             <div class="imagen">
-              <img src="imagenes/<?php echo $item['imagen']; ?>" alt="" />
+              <img src="imagenes/<?php echo $item['imagen']; ?>" alt="Paisajes extraordinarios" title="Paisajes extraordinarios"/>
               <div class="iconos">
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-eye"></a>
@@ -218,7 +221,7 @@ incluirTemplate('header');
         <?php while ($item = mysqli_fetch_assoc($resultadoPaquetes)): ?>
 	        <div class="caja">
 	          <div class="imagen">
-	            <img src="imagenes/<?php echo $item['imagen'] ?>" alt="" />
+	            <img src="imagenes/<?php echo $item['imagen'] ?>" alt="Paisajes extraordinarios" title="Paisajes extraordinarios" />
 	          </div>
 	          <div class="contenido">
 	            <h3><?php echo $item['titulo'] ?></h3>
@@ -245,7 +248,7 @@ incluirTemplate('header');
               eum, quasi soluta labore beatae illo excepturi ex molestiae nam.
             </p>
             <div class="usuario">
-              <img src="img/pic-1.png" alt="" />
+              <img src="img/pic-1.png" alt="Paisajes extraordinarios" title="Paisajes extraordinarios" />
               <div class="info">
                 <h3>Lucas Hernandez</h3>
                 <span>medico</span>
@@ -261,7 +264,7 @@ incluirTemplate('header');
               eum, quasi soluta labore beatae illo excepturi ex molestiae nam.
             </p>
             <div class="usuario">
-              <img src="img/pic-2.png" alt="" />
+              <img src="img/pic-2.png" alt="Paisajes extraordinarios" title="Paisajes extraordinarios" />
               <div class="info">
                 <h3>Lucas Hernandez</h3>
                 <span>medico</span>
@@ -277,7 +280,7 @@ incluirTemplate('header');
               eum, quasi soluta labore beatae illo excepturi ex molestiae nam.
             </p>
             <div class="usuario">
-              <img src="img/pic-3.png" alt="" />
+              <img src="img/pic-3.png" alt="Paisajes extraordinarios" title="Paisajes extraordinarios" />
               <div class="info">
                 <h3>Lucas Hernandez</h3>
                 <span>medico</span>
@@ -293,7 +296,7 @@ incluirTemplate('header');
               eum, quasi soluta labore beatae illo excepturi ex molestiae nam.
             </p>
             <div class="usuario">
-              <img src="img/pic-4.png" alt="" />
+              <img src="img/pic-4.png" alt="Paisajes extraordinarios" title="Paisajes extraordinarios"/>
               <div class="info">
                 <h3>Lucas Hernandez</h3>
                 <span>medico</span>
@@ -309,7 +312,7 @@ incluirTemplate('header');
               eum, quasi soluta labore beatae illo excepturi ex molestiae nam.
             </p>
             <div class="usuario">
-              <img src="img/pic-5.png" alt="" />
+              <img src="img/pic-5.png" alt="Paisajes extraordinarios" title="Paisajes extraordinarios"/>
               <div class="info">
                 <h3>Lucas Hernandez</h3>
                 <span>medico</span>
@@ -325,7 +328,7 @@ incluirTemplate('header');
               eum, quasi soluta labore beatae illo excepturi ex molestiae nam.
             </p>
             <div class="usuario">
-              <img src="img/pic-6.png" alt="" />
+              <img src="img/pic-6.png" alt="Paisajes extraordinarios" title="Paisajes extraordinarios"/>
               <div class="info">
                 <h3>Lucas Hernandez</h3>
                 <span>medico</span>
@@ -346,7 +349,7 @@ incluirTemplate('header');
       <div class="contenedor">
         <!-- Servicio -->
         <div class="caja">
-          <img src="img/serv-1.png" alt="" />
+          <img src="img/serv-1.png" alt="Paisajes extraordinarios" title="Paisajes extraordinarios"/>
           <h3>guias completas</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur,
@@ -358,7 +361,7 @@ incluirTemplate('header');
 
         <!-- Servicio -->
         <div class="caja">
-          <img src="img/serv-2.png" alt="" />
+          <img src="img/serv-2.png" alt="Paisajes extraordinarios" title="Paisajes extraordinarios"/>
           <h3>paquetes personalizados</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur,
@@ -370,7 +373,7 @@ incluirTemplate('header');
 
         <!-- Servicio -->
         <div class="caja">
-          <img src="img/serv-3.png" alt="" />
+          <img src="img/serv-3.png" alt="Paisajes extraordinarios" title="Paisajes extraordinarios" />
           <h3>viajes familiares</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur,
@@ -382,7 +385,7 @@ incluirTemplate('header');
 
         <!-- Servicio -->
         <div class="caja">
-          <img src="img/serv-4.png" alt="" />
+          <img src="img/serv-4.png" alt="Paisajes extraordinarios" title="Paisajes extraordinarios"/>
           <h3>guias entrenados</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur,
@@ -394,7 +397,7 @@ incluirTemplate('header');
 
         <!-- Servicio -->
         <div class="caja">
-          <img src="img/serv-1.png" alt="" />
+          <img src="img/serv-1.png" alt="Paisajes extraordinarios" title="Paisajes extraordinarios"/>
           <h3>aventuras exclusivas</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur,
@@ -406,7 +409,7 @@ incluirTemplate('header');
 
         <!-- Servicio -->
         <div class="caja">
-          <img src="img/serv-6.png" alt="" />
+          <img src="img/serv-6.png" alt="Paisajes extraordinarios" title="Paisajes extraordinarios" />
           <h3>multiples experiencias</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur,
@@ -454,7 +457,7 @@ incluirTemplate('header');
 
     <!-- Fin Seccion Playlist -->
 
-    <!-- Inicio Seccion Pokemones -->
+    <!-- Inicio Seccion Pokemons -->
     <section class="pokemones">
       <div class="contenido">
         <h2 class="encabezado">Pokemones para <span style="color: green;">Aventureros</span></h2>
@@ -462,6 +465,6 @@ incluirTemplate('header');
       </div>
     </section>
 
-    <!-- Fin Seccion Pokemones -->
+    <!-- Fin Seccion Pokemons -->
 <?php
 incluirTemplate('footer');

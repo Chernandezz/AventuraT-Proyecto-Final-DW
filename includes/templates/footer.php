@@ -22,11 +22,11 @@
         <div class="caja">
           <h3>contacto</h3>
           <a href="#"><i class="fas fa-phone"></i> +57 3017707071 </a>
-          <a href="#"><i class="fas fa-phone"></i> Telefono leo </a>
+          <a href="#"><i class="fas fa-phone"></i> +57 3157443358 </a>
           <a href="#"
             ><i class="fas fa-envelope"></i> chernandezz@unal.edu.co
           </a>
-          <a href="#"><i class="fas fa-envelope"></i> correo leo </a>
+          <a href="#"><i class="fas fa-envelope"></i> lgarcessa@unal.edu.co </a>
           <a href="#"><i class="fas fa-map"></i> manizales, caldas - 170009 </a>
         </div>
 
